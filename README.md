@@ -1,3 +1,7 @@
 # kiwi
 mini framework
-rode of exploring source code
+A mini framework for implementing the IOC and AOP.
+## kiwi-framework
+
+## web-demo
+
