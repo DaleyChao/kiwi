@@ -12,13 +12,13 @@
         <param-value>Daniel</param-value>
     </context-param>
     <listener>
-        <listener-class>com.daley.kangaroo.listener.ContextListenerTest</listener-class>
+        <listener-class>com.daley.kiwi.listener.ContextListenerTest</listener-class>
     </listener>
 
-    <context-param>
-        <param-name>log4jConfiguration</param-name>
-        <param-value>/WEB-INF/classes/log4j2.xml</param-value>
-    </context-param>
+    <!--<context-param>-->
+        <!--<param-name>log4jConfiguration</param-name>-->
+        <!--<param-value>/WEB-INF/classes/log4j2.xml</param-value>-->
+    <!--</context-param>-->
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
