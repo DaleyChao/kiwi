@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>kiwi</artifactId>
-        <groupId>com.daley</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>kiwi-parent</artifactId>
+        <groupId>com.daley.kiwi</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,101 +14,16 @@
 
     <!-- 版本 -->
     <properties>
-        <servlet-api.version>3.1.0</servlet-api.version>
-        <log4j-core.version>2.8.2</log4j-core.version>
-        <log4j-slf4j-impl.version>2.8.2</log4j-slf4j-impl.version>
-        <slf4j-log4j12.version>1.7.7</slf4j-log4j12.version>
-        <jsp-api.version>2.2</jsp-api.version>
-        <jstl.version>1.2</jstl.version>
-        <commons-collections4.version>4.2</commons-collections4.version>
         <junit.version>4.11</junit.version>
-        <mysql-connector-java.version>5.1.33</mysql-connector-java.version>
-        <commons-lang3.version>3.3.2</commons-lang3.version>
-        <commons-dbutils.version>1.6</commons-dbutils.version>
-        <commons-dbcp2.version>2.0.1</commons-dbcp2.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+        <!--依赖kiwi-framework-->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${servlet-api.version}</version>
-            <!--参与编译 不打包-->
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j-core.version}</version>
-        </dependency>
-
-        <!-- log4j-slf4j实现，此依赖非常重要-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.logging.log4j</groupId>-->
-            <!--<artifactId>log4j-slf4j-impl</artifactId>-->
-            <!--<version>${log4j-slf4j-impl.version}</version>-->
-        <!--</dependency>-->
-        <!-- SLF4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.7</version>
-        </dependency>
-
-        <!--  JSP-->
-        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>${jsp-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- JSTL -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- MySQL -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <!-- 常用工具类 -->
-        <!-- Apache Commons Lang -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>${commons-collections4.version}</version>
-        </dependency>
-
-        <!-- Apache Commons DbUtils -->
-        <dependency>
-            <groupId>commons-dbutils</groupId>
-            <artifactId>commons-dbutils</artifactId>
-            <version>${commons-dbutils.version}</version>
-        </dependency>
-        <!-- Apache DBCP 连接池-->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>${commons-dbcp2.version}</version>
+            <groupId>com.daley.kiwi</groupId>
+            <artifactId>kiwi-framework</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
         <!--单元测试-->
