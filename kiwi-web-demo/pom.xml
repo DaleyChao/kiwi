@@ -14,6 +14,7 @@
 
     <!-- 版本 -->
     <properties>
+        <servlet-api.version>3.1.0</servlet-api.version>
         <junit.version>4.11</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -24,6 +25,14 @@
             <groupId>com.daley.kiwi</groupId>
             <artifactId>kiwi-framework</artifactId>
             <version>1.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <!--参与编译 不打包-->
+            <scope>provided</scope>
         </dependency>
 
         <!--单元测试-->
