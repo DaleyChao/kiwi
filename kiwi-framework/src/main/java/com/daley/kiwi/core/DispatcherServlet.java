@@ -19,10 +19,6 @@ import java.io.IOException;
  */
 @WebServlet(urlPatterns = "/*",loadOnStartup = 0)
 public class DispatcherServlet extends HttpServlet{
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.service(req, resp);
-    }
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -37,8 +33,13 @@ public class DispatcherServlet extends HttpServlet{
         jspServletReg.addMapping(ConfigHelper.getAppJspPath()+"*");
 
         //注册处理静态资源的servlet
-        ServletRegistration defaultServletReg = servletContext.getServletRegistration("default")；
+        ServletRegistration defaultServletReg = servletContext.getServletRegistration("default");
         defaultServletReg.addMapping(ConfigHelper.getAppAssetPath()+"*");
 
+    }
+
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
     }
 }
