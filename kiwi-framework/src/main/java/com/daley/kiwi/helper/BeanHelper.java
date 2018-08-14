@@ -35,7 +35,7 @@ public final class BeanHelper {
 
     @SuppressWarnings("unchecked")
     public static <T> T getBean(Class<T> cls) {
-       if(BEAN_MAP.containsKey(cls)){
+       if(!BEAN_MAP.containsKey(cls)){
            throw new RuntimeException("bean not exist");
        }
        return (T)BEAN_MAP.get(cls);

@@ -1,5 +1,6 @@
 package com.daley.kiwi.service;
 
+import com.daley.kiwi.annotation.Service;
 import com.daley.kiwi.helper.DatabaseHelper;
 import com.daley.kiwi.model.Customer;
 
@@ -10,6 +11,7 @@ import java.util.Map;
 /**
  * 提供客户数据服务
  */
+@Service
 public class CustomerService {
 
     /**
