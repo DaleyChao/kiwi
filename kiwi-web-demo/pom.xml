@@ -16,6 +16,7 @@
     <properties>
         <servlet-api.version>3.1.0</servlet-api.version>
         <junit.version>4.11</junit.version>
+        <cglib.version>3.2.5</cglib.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -34,6 +35,14 @@
             <!--参与编译 不打包-->
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+
 
         <!--单元测试-->
         <dependency>
