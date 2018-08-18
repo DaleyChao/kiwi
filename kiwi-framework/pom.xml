@@ -25,6 +25,7 @@
         <commons-dbutils.version>1.6</commons-dbutils.version>
         <commons-dbcp2.version>2.0.1</commons-dbcp2.version>
         <commons-codec.version>1.11</commons-codec.version>
+        <cglib.version>2.2.2</cglib.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -109,7 +110,11 @@
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
 
         <!--单元测试-->
         <dependency>
