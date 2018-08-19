@@ -11,7 +11,7 @@ public final class ClassLoader {
 
     public static void init() {
         Class<?>[] classes = {
-                ClassLoadHelper.class, BeanHelper.class, IocHelper.class, ControllerHelper.class, AopHelper.class
+                ClassLoadHelper.class, BeanHelper.class, AopHelper.class, IocHelper.class, ControllerHelper.class
         };
         for (Class<?> cls : classes) {
             ClassUtil.loadClass(cls.getName());
