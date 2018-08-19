@@ -1,9 +1,6 @@
 package com.daley.kiwi.core;
 
-import com.daley.kiwi.helper.BeanHelper;
-import com.daley.kiwi.helper.ClassLoadHelper;
-import com.daley.kiwi.helper.ControllerHelper;
-import com.daley.kiwi.helper.IocHelper;
+import com.daley.kiwi.helper.*;
 import com.daley.kiwi.utils.ClassUtil;
 
 /**
@@ -14,7 +11,7 @@ public final class ClassLoader {
 
     public static void init() {
         Class<?>[] classes = {
-                ClassLoadHelper.class, BeanHelper.class, IocHelper.class, ControllerHelper.class
+                ClassLoadHelper.class, BeanHelper.class, IocHelper.class, ControllerHelper.class, AopHelper.class
         };
         for (Class<?> cls : classes) {
             ClassUtil.loadClass(cls.getName());
