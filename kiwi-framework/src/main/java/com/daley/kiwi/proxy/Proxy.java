@@ -1,6 +1,8 @@
 package com.daley.kiwi.proxy;
 
 /**
+ * 代理接口
+ *
  * @author daley
  * @date 2018/8/18
  */

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 代理链
  * @author daley
  * @date 2018/8/18
  */
