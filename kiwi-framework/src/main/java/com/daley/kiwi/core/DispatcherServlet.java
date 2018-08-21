@@ -31,7 +31,7 @@ import java.util.Map;
  * @author daley
  * @date 2018/7/30
  */
-@WebServlet(urlPatterns = "/*", loadOnStartup = 0)
+@WebServlet(urlPatterns = "*.do", loadOnStartup = 0)
 public class DispatcherServlet extends HttpServlet {
 
     @Override
