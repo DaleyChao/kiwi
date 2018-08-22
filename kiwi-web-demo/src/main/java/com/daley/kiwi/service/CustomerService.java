@@ -1,6 +1,7 @@
 package com.daley.kiwi.service;
 
 import com.daley.kiwi.annotation.Service;
+import com.daley.kiwi.annotation.Transaction;
 import com.daley.kiwi.helper.DatabaseHelper;
 import com.daley.kiwi.model.Customer;
 
@@ -33,6 +34,7 @@ public class CustomerService {
     /**
      * 创建客户
      */
+    @Transaction
     public boolean createCustomer(Map<String, Object> fieldMap) {
         return DatabaseHelper.insertEntity(Customer.class, fieldMap);
     }
@@ -40,6 +42,7 @@ public class CustomerService {
     /**
      * 更新客户
      */
+    @Transaction
     public boolean updateCustomer(long id, Map<String, Object> fieldMap) {
         return DatabaseHelper.updateEntity(Customer.class, id, fieldMap);
     }
@@ -47,6 +50,7 @@ public class CustomerService {
     /**
      * 删除客户
      */
+    @Transaction
     public boolean deleteCustomer(long id) {
         return DatabaseHelper.deleteEntity(Customer.class, id);
     }
