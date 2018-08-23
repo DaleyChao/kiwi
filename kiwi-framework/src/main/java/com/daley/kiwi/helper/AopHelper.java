@@ -9,9 +9,11 @@ import java.util.Map;
 import java.util.Set;
 
 import com.daley.kiwi.annotation.Aspect;
+import com.daley.kiwi.annotation.Service;
 import com.daley.kiwi.proxy.AspectProxy;
 import com.daley.kiwi.proxy.Proxy;
 import com.daley.kiwi.proxy.ProxyManager;
+import com.daley.kiwi.proxy.TransactionProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +22,6 @@ import org.slf4j.LoggerFactory;
  *
  */
 public final class AopHelper {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(AopHelper.class);
 
     static {
@@ -39,8 +40,9 @@ public final class AopHelper {
     }
 
     private static Map<Class<?>, Set<Class<?>>> createProxyMap() throws Exception {
-        Map<Class<?>, Set<Class<?>>> proxyMap = new HashMap<Class<?>, Set<Class<?>>>();
+        Map<Class<?>, Set<Class<?>>> proxyMap = new HashMap<>();
         addAspectProxy(proxyMap);
+        addTransactionProxy(proxyMap);
         return proxyMap;
     }
 
@@ -55,6 +57,10 @@ public final class AopHelper {
         }
     }
 
+    private static void addTransactionProxy(Map<Class<?>, Set<Class<?>>> proxyMap) {
+        Set<Class<?>> serviceClassSet = ClassLoadHelper.getClassSetByAnnotation(Service.class);
+        proxyMap.put(TransactionProxy.class, serviceClassSet);
+    }
 
     private static Set<Class<?>> createTargetClassSet(Aspect aspect) throws Exception {
         Set<Class<?>> targetClassSet = new HashSet<Class<?>>();
